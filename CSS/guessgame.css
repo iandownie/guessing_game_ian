@@ -153,15 +153,17 @@ span{
 
 /*******Re-sizing******/
 
-@media(min-width: 989px){
-  select {
-    display: none;
+@media(max-width: 750px){
+  .input, #guess{
+    margin: 0;
+  width: 100%;
   }
 }
 
-@media(max-width: 989px){
-  #buttons button{
-    display: none;
+@media(max-width: 750px){
+  section{
+  margin: 0;
+    width: 100%;
   }
 }
 
