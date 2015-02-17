@@ -22,17 +22,15 @@ h1, h2{
   font-style: none;
   color: #fff;
   font-weight: normal;
-
-
-
 }
+
 h1 {
   font-family: 'Averia Serif Libre', cursive;
   font-size: 2em;
   line-height: 0.8em;
     text-shadow: 3px 3px 0 #ccc; 
       text-shadow: 2px 2px 0 #ccc; 
-        text-shadow: 1px 1ßpx 0 #ccc; 
+        text-shadow: 1px 1px 0 #ccc; 
 }
 h2 {
   font-size:0.75em;
@@ -41,52 +39,143 @@ h2 {
       text-shadow: 0.5px 0.5px 0 #ccc; 
 }
 
-div ul{ 
-list-style: none;  
 
-}
-div li{
-  max-width: 3%px;
-  margin: 3%;
-}
-
+/*//////
+Input Box
+//////*/
 input{
-  margin-left: 25%;
-  width:50%;
+  
+  width:100%;
   height: 45px;
   text-align: center;
+  font-size: 1.5em;
+  font-family: 'Averia Serif Libre', cursive;
+  min-width:286px;
 }
-
-#counter{
-  color: black;
+.input{
+  margin:0 25%;
+  float:center;
+  min-width:275px;
+}
+select{
+  margin-left:25%;
   text-align: center;
-}
-#button1:hover{
-  color: #000000;
-  box-shadow:inset 0 0 0 1em rgba(0,50,0, .5);
-}
-#button3:hover{
-  color: #000000;
-  box-shadow:inset 0 0 0 1em rgba(0,50,0, .5);
-}
-#button2:hover{
-  color: #000000;
-  box-shadow:inset 0 0 0 1em rgba(0,50,0, .5);
+  display: block;
+  width:50%;
+
 }
 
-#buttons li{
+/*//////
+Buttons
+//////*/
+div{
+  margin: 3%;
+  list-style: none; 
+}
+
+button{
   width:26%;
   float: left;
   box-shadow:0px 0px 20px 10px #fff;
   border-radius: 100%;
-}
-
-#buttons li p{
-  margin: 10%;
-  height:40px;
+  border: solid;
+  margin: 3.667%;
+  height:110px;
   padding: 5%;
-  text-align: center;
-  font-size:0.75em;
+  background-color:transparent;
+  font-size:1em;
+  font-family: 'Averia Serif Libre', cursive;
+}
+#button1:hover, #button3:hover, .button2:hover{
+  color: #000000;
+  box-shadow:inset 0 0 0 1em rgba(0,50,0, .5);
+}
+
+#button0{
+  display:none;
 }
 
 
+/*//////
+Guess Counter
+//////*/
+#counter{
+  color: black;
+  text-align: center;
+}
+
+/**********
+Winning notice
+**********/
+
+#winning, #losing{
+  background: rgba(0, 0, 0, 0.85);
+  width: 90%;
+  
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  text-align:center;
+  color:#0f0;
+}
+
+
+#winning p{
+  margin: 8% 3%;
+  font-size:3em;
+}
+#losing p {
+  padding-top: 8%;
+  font-size:3em;
+}
+#winning, #losing button{
+  float:center;
+  margin: 0;
+  padding: 0;
+  color:#0f0;
+}
+#winning, #losing button:hover{
+  color:#0f0;
+  box-shadow:inset 0 0 0 1em rgba(0,250,0, .5);
+}
+
+
+
+/*Spans*/
+
+
+span{
+  color: #0f0;
+  background-color:black;
+  text-align: center;
+  display:block;
+}
+
+/*******Re-sizing******/
+
+@media(min-width: 989px){
+  select {
+    display: none;
+  }
+}
+
+@media(max-width: 989px){
+  #buttons button{
+    display: none;
+  }
+}
+
+/*****Past Guesses****/
+
+footer{
+  color: black;
+  margin-top:20%;
+  display: none;
+  border-top: solid black;
+  text-align: center;
+}
+
+footer li{
+  
+  list-style: decimal;
+}
